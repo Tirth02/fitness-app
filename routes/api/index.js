@@ -1,0 +1,15 @@
+const router = require('express').Router()
+const logRoutes = require("./logs")
+const symptomRoutes = require('./symptom') 
+const prescriptionRoutes = require('./prescription')
+const doctorRoutes = require('./doctor')
+const appointmentRoutes = require('./appointment')
+const hospitalRoutes = require('./hospitals')
+
+router.use('/logs',logRoutes)
+router.use('/symptoms',symptomRoutes)
+router.use('/prescriptions',prescriptionRoutes)
+router.use('/doctors',doctorRoutes)
+router.use('/appointment',appointmentRoutes)
+router.use('./hospital',hospitalRoutes)
+module.exports = router
